@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -15,13 +14,6 @@ import {
 } from "@/components/ui/accordion";
 
 import Loading from "@/components/loading";
-
-const corsOptions = {
-  origin: "http://127.0.0.1:8000",
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"],
-  optionsSuccessStatus: 200,
-};
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
@@ -111,12 +103,11 @@ export default function Home() {
               <Accordion
                 type="multiple"
                 className="w-full"
-                value={accordion}
+                value={accordion ? accordion : []}
                 onValueChange={(value) => setAccordion(value)}
-                collapsible
               >
                 {Object.entries(summary).map(([key, value]) => (
-                  <AccordionItem value={key}>
+                  <AccordionItem key={key} value={key}>
                     <AccordionTrigger className="text-xl font-bold">
                       {key.charAt(0).toUpperCase() + key.slice(1)}
                     </AccordionTrigger>

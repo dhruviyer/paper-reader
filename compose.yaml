@@ -1,0 +1,20 @@
+name: "paperreader"
+services:
+  backend:
+    image: "paperreader-backend:latest"
+    container_name: "paperreader-backend"
+    build:
+      context: ./backend/
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      UNSTRUCTURED_FREE_API_KEY: ${UNSTRUCTURED_FREE_API_KEY}
+    ports:
+      - "8000:8000"
+
+  frontend:
+    image: "paperreader-frontend:latest"
+    container_name: "frontend"
+    build:
+      context: ./frontend/
+    ports:
+      - "3000:3000"

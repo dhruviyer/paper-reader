@@ -8,7 +8,7 @@ import {
 
 export default function Loading() {
   return (
-    <Accordion type="multiple" className="w-full" collapsible>
+    <Accordion type="multiple" className="w-full">
       {Array.from({ length: 5 }).map((_, index) => (
         <AccordionItem key={index} value={`item-${index}`}>
           <AccordionTrigger className="text-lg font-bold">
