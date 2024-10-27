@@ -48,7 +48,7 @@ FINDINGS = {
 
 METHODS = {
     "title": "methods",
-    "query": "If the authors built something, describe how it works under the hood as if to a second-year CS undergrad. If the authors did not create anything, answer N/A"
+    "query": "If the authors built something, describe how it works under the hood as if to a second-year CS undergrad."
 }
 
 RESULTS = {
