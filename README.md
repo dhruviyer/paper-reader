@@ -1,6 +1,6 @@
 # Paper Reader
 
-_Using LMs to read and summarize research papers._
+_Using LLMs to read and summarize research papers._
 
 This project is meant to summarize compsci research papers in pdf form. You can see the output of this below
 
