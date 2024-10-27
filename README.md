@@ -6,7 +6,13 @@ This project is meant to summarize compsci research papers in pdf form. You can 
 
 ![a screenshot of the application](example.png)
 
-To get started, clone the repo and make sure you have Docker installed. Then do
+To get started, make sure you have the following environment variables set:
+
+`OPENAI_API_KEY`
+
+`UNSTRUCTURED_FREE_API_KEY`
+
+Then, make sure you have Docker installed and do
 
 ```
 docker compose up -d --build
